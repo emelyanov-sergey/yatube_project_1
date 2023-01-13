@@ -1,24 +1,21 @@
-from django.http import HttpResponse
+# from django.http import HttpResponse
 from django.shortcuts import render
 
 
 # Create your views here.
 def index(request):
     template = 'posts/index.html'
-    title = 'главная страница'
+    title = 'Это главная страница проекта Yatube'
     context = {
-        'title': title
+        'title': title,
     }
     return render(request, template, context)
 
 
-def group_posts(request, any_slug):
+def group_posts(request):
     template = 'posts/group_list.html'
-    title = 'информация о группах'
+    title = 'Здесь будет информация о группах проекта Yatube'
     context = {
         'title': title
     }
     return render(request, template, context)
-
-
-
